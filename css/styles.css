@@ -1,0 +1,12 @@
+#tasks {
+  cursor: pointer;
+  color: blue;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+.jumbotron {
+  text-align: center;
+}
