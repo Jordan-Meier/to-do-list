@@ -1,6 +1,9 @@
-function Task(name, deadline, importance, toDo) {
+function Task(name) {
   this.name = name;
-  this.deadline = deadline;
-  this.importance = importance;
-  this.toDo = toDo;
+
 }
+
+$(document).ready(function() {
+
+
+});
