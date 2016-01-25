@@ -9,12 +9,13 @@ $(document).ready(function() {
     var inputName = $("input#new-task-name").val();
     var newTask = new Task(inputName);
 
-    $("ul#tasks").append("<li id=" + newTask.name + "><span class= 'taskName'>" + newTask.name +  "</span></li>");
+    $("ul#tasks").append("<li id='" + newTask.name + "'><span class= 'taskName'>" + newTask.name +  "</span></li>");
 
     $("input#new-task-name").val("");
 
-    $(# + newTask.name).click(function() {
-      // $("#show-tasks").show();
+    $("#" + newTask.name).click(function() {
+      $("#" + newTask.name).hide();
+      $("ul#completedTask").append("<li id='" + newTask.name + "'><span class= 'taskName'>" + newTask.name +  "</span></li>");
     });
 
 
