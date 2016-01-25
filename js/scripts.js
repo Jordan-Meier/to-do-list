@@ -8,14 +8,17 @@ $(document).ready(function() {
 
     var inputName = $("input#new-task-name").val();
     var newTask = new Task(inputName);
+    var newId = newTask.name.replace(/\s/g, '');
+    var newId = newId.replace(/[.,\/#!$%\^&\*;:'{}=\-_`~()]/g, '');
 
-    $("ul#tasks").append("<li id='" + newTask.name + "'><span class= 'taskName'>" + newTask.name +  "</span></li>");
+
+    $("ul#tasks").append("<li id='" + newId + "'><span class= 'taskName'>" + newTask.name +  "</span></li>");
 
     $("input#new-task-name").val("");
 
-    $("#" + newTask.name).click(function() {
-      $("#" + newTask.name).hide();
-      $("ul#completedTask").append("<li id='" + newTask.name + "'><span class= 'taskName'>" + newTask.name +  "</span></li>");
+    $("#" + newId).click(function() {
+      $("#" + newId).hide();
+      $("ul#completedTask").append("<li id='" + newId + "'><span class= 'taskName'>" + newTask.name +  "</span></li>");
     });
 
 
